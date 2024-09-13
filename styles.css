@@ -1,0 +1,459 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-top: 70px;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #1f3b4d;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+    transform: translateY(-5px);
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background: url('https://www.tastingtable.com/img/gallery/13-most-affordable-grocery-stores-in-2023/intro-1679073677.webp') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    padding: 150px 0;
+    text-align: center;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.welcome-banner h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: font-size 0.3s ease;
+}
+
+.welcome-banner p {
+    font-size: 26px;
+    color: #000000;
+}
+
+/* Section Styles */
+section {
+    padding: 70px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+section h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 5px;
+    background-color: #e74c3c;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Card Styles */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+    background: #f7f7f7;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+.card-content p {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card-btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    align-self: center;
+    margin-top: auto;
+}
+
+.card-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover h3 {
+    color: #e74c3c;
+}
+
+/* Specials Section */
+.specials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.special-item {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.special-item h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #1f3b4d;
+    transition: color 0.3s ease;
+}
+
+.special-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.special-item a {
+    background-color: #e74c3c;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    align-self: center;
+    margin-top: auto;
+}
+
+.special-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.special-item:hover h3 {
+    color: #e74c3c;
+}
+
+/* Hidden Section */
+.hidden-section {
+    display: none;
+}
+
+.hidden-section.active {
+    display: block;
+    margin-top: 50px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Contact Section */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 0 50px;
+}
+
+.contact-item {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+    transition: color 0.3s ease;
+}
+
+
+/* Hover Effects */
+.contact-item:hover {
+    background-color: #e74c3c; /* Background color changes to the site's accent color */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Add slight movement effect */
+}
+
+/* Hover Effects */
+.contact-item1:hover {
+    background-color: #e74c3c; /* Background color changes to the site's accent color */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Add slight movement effect */
+}
+.contact-item:hover h3 {
+    color: white; /* Text color change on hover */
+}
+
+.contact-item:hover p {
+    color: #f1f1f1; /* Change the paragraph color on hover */
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 40px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form h3 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: #1f3b4d;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+/* Tablet */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .cards-container, .specials-list, .contact-info {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .welcome-banner h1 {
+        font-size: 44px;
+    }
+
+    .welcome-banner p {
+        font-size: 18px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .card, .special-item {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .welcome-banner h1 {
+        font-size: 36px;
+    }
+
+    .welcome-banner p {
+        font-size: 16px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .welcome-banner h1 {
+        font-size: 30px;
+    }
+
+    .welcome-banner p {
+        font-size: 14px;
+    }
+
+    .card, .special-item, .contact-item {
+        width: 100%;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+}
